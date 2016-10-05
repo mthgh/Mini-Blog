@@ -6,9 +6,9 @@ import string
 from xml.dom import minidom
 import urllib2
 
-ip_key = "ae921407720952054d671758d9b59aa80043039ad36fd2f3d72da6cc341af0f8"
-map_key = "AIzaSyAZgqWpOZCvXb1_v3pE72IIYSbVBqagsWo"
-SECRET = 'secret'
+ip_key = "secret"  # please create your own
+map_key = "secret" # please create your own
+SECRET = 'secret' # please create your own
 
 # check_user, check_pas, check_email: check if the user sign up info is valid or not
 
