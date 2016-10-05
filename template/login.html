@@ -1,0 +1,25 @@
+{% extends "base.html" %}
+
+{% block content %}
+<a class='title' href=/>Mini Blog</a>
+<form method='post'>
+  <table>
+    <caption class='caption'>User Login</caption>
+    <tr>
+	  <td class='lable'>Username</td>
+	  <td><input type='text' name='username' value={{username}}></td>
+	  <td class='error'>{{error1}}</td>
+	</tr>
+	<tr>
+	  <td class='lable'>Password</td>
+	  <td><input type='password' name='password'></td>
+	  <td class='error'>{{error2}}</td>
+	</tr>
+  </table>
+  <input class='submit1' type='submit'>
+</form>
+<div class='error'>{{error}}</div>
+<br>
+<br>
+<div class='lable1'>Not yet have an account? <a href="/signup"><b>sign up</b></a> here!</div>
+{% endblock %}

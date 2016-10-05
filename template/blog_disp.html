@@ -1,0 +1,79 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+  {% if u_info %}
+    <a class='title' href=/{{userid}}/front>{{u_info.user}} Mini Blog</a>
+  {% else %}
+    <a class='title' href=/>Mini Blog</a>
+  {% endif %}
+  <br>
+  <br>
+  
+  
+  <div class='menu'>
+	<a class='userlink' href='/'>main page</a>
+  </div>
+  {% if u_info and u_info.user==username %}
+    <div class='menu'>
+	  <a class='userlink' href='/{{userid}}/newpost'>post new blog</a>
+    </div>
+    <div class='menu'>
+	  <a class='userlink' href='/{{userid}}/setting'>settings</a>
+    </div>
+	<div class='menu'>
+	  <a class='userlink' href='/{{userid}}/logout'>Logout</a>
+    </div>
+  {% endif %}
+  <br>  
+  <br>
+  
+  
+  {% if blogs=='error' %}
+    <div>
+	<div>
+    <div class='error'> Error: No such Blog, Please Input a Valid Blog Url.</div>
+
+  {% elif blogs %}
+    {% for blog in blogs %}
+      <div>
+	    <div class='singleblog'>
+		  {% if u_info %}
+	        <a class='singleblog_l' href=/{{userid}}/{{blog.key().id()}}>{{blog.title}}</a>
+		  {% else %}
+		    <a class='singleblog_l' href=/{{blog.key().parent().name()}}/{{blog.key().id()}}>{{blog.title}}</a>
+		  {% endif %}
+	    </div>
+	  
+	      {% if u_info and u_info.user==username %}
+	        <div>
+	          <form  method='post'>
+		        <input type='hidden' name='blog_id' value={{blog.key().id()}}>
+		        <input class='edit' type='submit' value='Delete'>
+		      </form>
+	        </div>
+	        <div>
+	          <form action=/{{userid}}/{{blog.key().id()}}/edit>
+		        <input class='edit' type='submit' value='Edit'>
+		      </form>
+	        </div>
+	      {% endif %}
+	  
+	    <div class='created'>{{blog.created.strftime("%a %b %d %Y %H:%M:%S")}}</div>  
+	  </div>
+	  <hr>
+	  <div class='content'>
+	    {{blog.content}}
+	  </div>
+	  <br>
+	  <br>
+    {% endfor %}
+    {% if page and page =='front' %}
+    <div class='more_link'>
+      <a class='more_link1' href=/{{userid}}/allblog>click to see all blogs</a>
+    </div>
+    {% endif %}
+  {% endif %}
+{% endblock %}
+
+

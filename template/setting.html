@@ -1,0 +1,40 @@
+{% extends "base.html" %}
+
+{% block content %}
+<a class='title' href=/>{{u_info.user}} Mini Blog</a>
+<br>
+<br>
+<div class='menu'>
+  <a class='userlink' href='/'>main page</a>
+</div>
+<div class='menu'>
+  <a class='userlink' href='/{{userid}}/logout'>Logout</a>
+</div>
+<br>  
+<br>
+
+<table>
+  <caption class='caption'>User Setting</caption>
+  <tr>
+	<td class='lable'>Username:</td>
+	<td class='font'>{{u_info.user}}</td>
+  </tr>
+  <tr>
+	<td class='lable'>Email:</td>
+	<td class='font'>{{u_info.email}}</td>
+  </tr>
+  <tr>
+	<td class='lable'>Created:</td>
+	<td class='font'>{{u_info.created.strftime("%a %b %d %Y %H:%M:%S")}}</td>
+  </tr>
+</table>
+<br>
+<br>
+<form action=/{{userid}}/user_update>
+<input class='font' type='submit' value='Update Info'>
+</form>
+<br>
+<form method='post'>
+<input class='font' type='submit' name='delete' value='Close Account'>
+</form>
+{% endblock %}

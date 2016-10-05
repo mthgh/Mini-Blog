@@ -1,0 +1,56 @@
+{% extends "base.html" %}
+
+{% block content %}
+<a class='title' href=/>{{username}} Mini Blog</a>
+<br>
+<br>
+<div class='menu'>
+  <a class='userlink' href='/'>main page</a>
+</div>
+<div class='menu'>
+	<a class='userlink' href='/{{userid}}/setting'>settings</a>
+</div>
+<div class='menu'>
+  <a class='userlink' href='/{{userid}}/logout'>Logout</a>
+</div>
+<br>  
+<br>
+<form method='post'>
+  <table>
+    <caption class='caption'>Update Info</caption>
+    <tr>
+	  <td class='lable'>Username:</td>
+	  <td class='font'>{{u_info.user}}</td>
+    </tr>
+	<tr>
+	  <td class='lable'>Current Password:</td>
+	  <td class='font'><input type='password' name='o_pw'></td>
+	  <td class='error'>{{error1}}</td>
+    </tr>
+	<tr>
+	  <td class='lable'>New Password:</td>
+	  <td class='font'><input type='password' name='n_pw'></td>
+	  <td class='error'>{{error2}}</td>
+    </tr>
+	<tr>
+	  <td class='lable'>Verify Password:</td>
+	  <td class='font'><input type='password' name='verify'></td>
+	  <td class='error'>{{error3}}</td>
+    </tr>
+    <tr>
+	  <td class='lable'>Email:</td>
+	  <td class='font'><input type='text' name='email' value={{u_info.email}}></td>
+	  <td class='error'>{{error4}}</td>
+    </tr>
+    <tr>
+	  <td class='lable'>Created:</td>
+	  <td class='font'>{{u_info.created.strftime("%a %b %d %Y %H:%M:%S")}}</td>
+    </tr>
+  </table>
+  <br>
+  <input class='submit' type='submit'>
+  <br>
+  <br>
+  <div class='error'>{{error}}</div>
+</form>
+{% endblock %}

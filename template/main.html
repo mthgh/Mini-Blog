@@ -1,0 +1,58 @@
+{% extends "base.html" %}
+
+{% block content %}
+  {% if username and userid %}
+    <a class='title' href=/{{userid}}/front>{{username}} Mini Blog</a>
+    <br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	
+	<a class='browse' href=/{{userid}}/front>Go to My Blog</a>
+	<br>
+	<br>
+	<a class='browse' href='/{{userid}}/newpost'>Make a New Post</a>
+	<br>
+	<br>
+	<a class='browse' href='/users'>Browse Blogger's Blogs!</a>
+	<br>
+	<br>
+	<a class='browse' href='/{{userid}}/setting'>Settings</a>
+	<br>
+	<br>
+	<a class='browse' href='/{{userid}}/logout'>Logout</a>
+	<br>
+	<br>
+	
+
+  {% else %}
+    <a class='title' href=/>Mini Blog</a>
+    <br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<div class='maindiv'>
+    <div>
+	  Welcome to mini blog!
+	</div>
+	<br>
+	<div>
+	  <a href='/signup'><b>sign up</b></a> to create an account
+	</div>
+	<br>
+	<div>
+	  Already have an account? <a href="/login"><b>login in</b></a> here
+	</div>
+	<br>
+	<a class='browse' href='/users'>Browse blogger's blogs</a>
+	</div>
+  {% endif %}
+  <div class='map'>
+  <h3>Our Users are from All Over the World!</h3>
+  <img src={{map_url}} alt='user from the world'></img>
+  </div>
+{% endblock %}

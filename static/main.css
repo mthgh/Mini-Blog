@@ -1,0 +1,126 @@
+           body {font-family:"times new roman";
+                padding: 10px;
+	            margin: 0 auto;
+			    width: 800px;
+                }
+	   
+         .title {font-size:40px;
+                display:block;
+	            text-align:center;
+	            text-decoration:none;
+	            color:black;
+				font-weight:bold;
+                }
+				
+		.browse  {font-size:25px;
+                display:inline;
+	            text-align:center;
+	            text-decoration:none;
+	            color:black;
+                }
+			
+    .singleblog  {font-size:23px;
+			    float:left;
+			    margin-top:0.5em;
+				font-weight:bold;
+                }
+			
+  .singleblog_l {text-decoration:none;
+			    color:black;
+			    font-weight:bold;
+	            }
+
+       .created	{font-size:15px;
+			    float:right;
+			    margin-top:1.3em;
+				margin-right:0.3em
+			    }
+			
+		      hr {margin-top:2.5em;
+		        border-width:1px;
+		        } 
+				
+	   .content  {padding: 1px;
+	             font-size:20px;
+		        }
+				
+		 .lable  {font-size:20px;
+		        padding-bottom:5px;
+				text-align:right;
+	            }
+				
+   .input_title {width:400px;
+	            height:25px;
+				font-size:20px;
+				font-family:'times new roman';
+                }
+				
+  .input_content{width:700px;
+	            height:400px;
+				resize:none;
+				font-size:20px;
+				font-family:'times new roman';
+				text-align:justify
+                }
+				
+		 .error {font-size:20px;
+		        color:red;
+			    }
+				
+		.submit {font-size:20px
+			    }
+				
+	   .caption {text-align:left; 
+	            font-size:30px;
+				font-weight:bold;
+				margin-top:50px;
+				margin-bottom:15px;
+				color:gray;
+	            }
+       .submit1 {font-size:17px;
+	            margin-top:5px;
+				margin-bottom:10px;
+			    }	
+
+		   .req	{font-size:15px;
+		        color:gray;
+				margin-bottom:10px;
+		        }
+				
+	   .maindiv  {font-size:25px;
+	            text-align:left;
+	            }
+	 .more_link  {font-size:15px;
+			    float:right;
+			    margin-top:1em;
+				margin-bottom:1em;
+	            }
+	.more_link1  {text-decoration:none;
+			    color:black;
+	            }
+				
+	  .userlink  {font-size:18px;
+	             background-color:rgb(182, 182, 180);
+	            text-decoration:none;
+				text-align:center;
+				padding:5px;
+	            color:white;
+				font-weight:bold;
+		        }
+	     .edit    {
+			    float:right;
+			    margin-top:1.6em;
+				margin-right:0.3em;
+				height:18px;
+				font-size:12px;
+	            }
+         .menu {float:left;
+		        margin-right:0.3em;}
+				
+         .font {font-size:18px;}	
+        .lable1 {font-size:20px;
+		        padding-bottom:5px;
+	            }
+          .map {position:absolute;
+		        right:120px;
+				top:130px;}				
