@@ -9,4 +9,4 @@ template folder include all the html files.
 blog.py include the code writing in python.    
 func.py include all the helper functions (if you would like to use this, please create your own 'ip_key', 'map_key' and 'SECRET'. (used for map api and hashing respectively)).
 
-The project was deployed on Google APP Engine, please visit https://v5-dot-blog-1286.appspot.com/ to check the full function. (several users were created already)
+The project was deployed on Google APP Engine, please visit https://v5-dot-blog-1286.appspot.com/ to check the full function.
